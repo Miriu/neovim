@@ -9,7 +9,7 @@ return {
     explorer = { enabled = true },
     indent = {
       enabled = true,
-      config = function()
+      config = function() -- se puede sacar este config, y el indent queda rojo
         vim.api.nvim_set_hl(0, 'SnacksIndentScope', { fg = '#56B6C2' })
       end,
     },
