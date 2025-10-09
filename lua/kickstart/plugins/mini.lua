@@ -15,7 +15,19 @@ return {
       -- - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
       -- - sd'   - [S]urround [D]elete [']quotes
       -- - sr)'  - [S]urround [R]eplace [)] [']
-      require('mini.surround').setup()
+      -- require('mini.surround').setup()
+
+      -- Animate cursor movement inside same buffer by showing customizable path.
+      -- Animate scrolling with a series of subscrolls ("smooth scrolling").
+      -- Animate window resize by gradually changing sizes of all windows.
+      -- Animate window open/close with visually updating floating window.
+      -- require('mini.animate').setup()
+
+      -- Configurable Lua functions to go forward/backward to a certain target.
+      require('mini.bracketed').setup()
+
+      -- Extend f, F, t, T to work on multiple lines.
+      -- require('mini.jump').setup()
 
       -- Simple and easy statusline.
       --  You could remove this setup call if you don't like it,

@@ -7,7 +7,7 @@
 vim.o.number = true
 -- You can also add relative line numbers, to help with jumping.
 --  Experiment for yourself to see if you like it!
--- vim.o.relativenumber = true
+vim.o.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.o.mouse = 'a'
@@ -72,3 +72,8 @@ vim.o.scrolloff = 10
 vim.o.confirm = true
 
 -- vim: ts=2 sts=2 sw=2 et
+
+vim.opt.tabstop = 2 -- El ancho que quieres que se vea el tab
+vim.opt.shiftwidth = 2 -- El número de espacios para la indentación
+vim.opt.expandtab = true -- Inserta espacios en lugar de caracteres de tab real
+vim.opt.softtabstop = 2 -- Para que la tecla retroceso funcione como un 'tab'
