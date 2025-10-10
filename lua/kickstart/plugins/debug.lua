@@ -137,42 +137,6 @@ return {
 
     local dap = require 'dap'
 
-    -- Configuración del Adaptador (si no usas mason-nvim-dap)
-    -- Esto le dice a nvim-dap cómo iniciar el servidor debugpy
-    dap.adapters.python = {
-      type = 'executable',
-      -- Cambia 'python3' por la ruta completa a tu intérprete de Python,
-      -- especialmente si usas un entorno virtual.
-      -- Ejemplo: command = os.getenv("HOME") .. "/.local/share/nvim/mason/packages/debugpy/venv/bin/python",
-      command = 'python3',
-      args = { '-m', 'debugpy.adapter' },
-    }
-
-    -- Configuración de "Launch" (Iniciar Archivo)
-    dap.configurations.python = {
-      {
-        type = 'python', -- Debe coincidir con el nombre del adaptador arriba
-        request = 'launch', -- Tipo de sesión DAP: 'launch' (iniciar) o 'attach' (adjuntar)
-        name = 'Launch Current File',
-        program = '${file}', -- Ejecuta el archivo actualmente abierto
-        pythonPath = function()
-          -- Opcional: Detectar y usar el entorno virtual (venv)
-          local cwd = vim.fn.getcwd()
-          if vim.fn.executable(cwd .. '/.venv/bin/python') == 1 then
-            return cwd .. '/.venv/bin/python'
-          elseif vim.fn.executable(cwd .. '/venv/bin/python') == 1 then
-            return cwd .. '/venv/bin/python'
-          else
-            -- Si no se encuentra un venv, usar el intérprete por defecto (global)
-            return 'python3'
-          end
-        end,
-        -- Puedes añadir más opciones:
-        -- cwd = '${workspaceFolder}', -- Directorio de trabajo
-        -- args = {}, -- Argumentos de línea de comandos para el script
-      },
-    }
-
     dap.adapters.nlua = function(callback, config)
       callback { type = 'server', host = config.host or '127.0.0.1', port = config.port or 8086 }
     end
