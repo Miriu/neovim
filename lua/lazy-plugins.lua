@@ -63,6 +63,8 @@ require('lazy').setup({
 
   require 'custom.plugins.dap-python', -- TODO: fijarse si se puede meter esto en debug
 
+  require 'custom.plugins.refactoring',
+
   -- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
   -- place them in the correct locations.

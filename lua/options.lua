@@ -77,3 +77,5 @@ vim.opt.tabstop = 2 -- El ancho que quieres que se vea el tab
 vim.opt.shiftwidth = 2 -- El número de espacios para la indentación
 vim.opt.expandtab = true -- Inserta espacios en lugar de caracteres de tab real
 vim.opt.softtabstop = 2 -- Para que la tecla retroceso funcione como un 'tab'
+vim.opt.autoindent = true
+vim.opt.smartindent = true
