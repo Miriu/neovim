@@ -79,3 +79,5 @@ vim.opt.expandtab = true -- Inserta espacios en lugar de caracteres de tab real
 vim.opt.softtabstop = 2 -- Para que la tecla retroceso funcione como un 'tab'
 vim.opt.autoindent = true
 vim.opt.smartindent = true
+
+vim.g.cornelis_use_global_binary = 1

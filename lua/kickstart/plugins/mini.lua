@@ -15,7 +15,7 @@ return {
       -- - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
       -- - sd'   - [S]urround [D]elete [']quotes
       -- - sr)'  - [S]urround [R]eplace [)] [']
-      -- require('mini.surround').setup()
+      -- require('mini.surround').setup() TODO: este plugin clashea con flash, fujarse porque parece estar bueno este plugin
 
       -- Animate cursor movement inside same buffer by showing customizable path.
       -- Animate scrolling with a series of subscrolls ("smooth scrolling").
@@ -26,13 +26,16 @@ return {
       -- Configurable Lua functions to go forward/backward to a certain target.
       require('mini.bracketed').setup()
 
+      require('mini.move').setup()
+
       -- Extend f, F, t, T to work on multiple lines.
-      -- require('mini.jump').setup()
+      -- require('mini.jump').setup() TODO: ya viene en otro plugin
 
       -- Simple and easy statusline.
       --  You could remove this setup call if you don't like it,
       --  and try some other statusline plugin
       local statusline = require 'mini.statusline'
+
       -- set use_icons to true if you have a Nerd Font
       statusline.setup { use_icons = vim.g.have_nerd_font }
 
